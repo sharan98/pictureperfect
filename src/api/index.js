@@ -1,5 +1,5 @@
 import axios from "axios";
-
+/*
 const URL = "https://xkcd-api.now.sh";
 const movies = [
   {
@@ -24,7 +24,7 @@ const movies = [
     alt: "There's a river flowing through the ocean"
   }
 ];
-
+*/
 const fetchMoies = async () => {
   // const response = movies;
   // const response = await axios.get(`${URL}/${comicNumber}`);
