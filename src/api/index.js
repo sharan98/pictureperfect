@@ -28,7 +28,7 @@ const movies = [
 const fetchMoies = async () => {
   // const response = movies;
   // const response = await axios.get(`${URL}/${comicNumber}`);
-  const response = await axios.get(`http://localhost:8000/getMovies`);
+  const response = await axios.get(`http://13.232.172.185:8000/getMovies`);
   if (response.status >= 400) {
     throw new Error(response);
   }
