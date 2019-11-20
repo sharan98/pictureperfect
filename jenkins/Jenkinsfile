@@ -1,0 +1,16 @@
+pipeline {
+    agent {
+        docker {
+            image 'node:10-alpine' 
+            args '-p 3000:3000' 
+        }
+    }
+    stages {
+        stage('Upload') { 
+            withaws(profile: 'picperfect_sharan'){
+                def identity = awsIdentity();
+                s3Upload(file:'build', bucket:'picperfectperfect', path:'/')
+            }
+        }
+    }
+}
