@@ -1,5 +1,5 @@
 node {
-    withAWS(profile: 'picperfect_sharan'){
+    withAWS(profile: 's3upload'){
         def identity = awsIdentity();
         s3Upload(file:'build', bucket:'picperfectperfect', path:'/')
     }
