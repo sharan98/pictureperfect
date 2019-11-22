@@ -1,4 +1,4 @@
-import { takeEvery, call, put } from "redux-saga/effects";
+import { takeEvery, all, call, put } from "redux-saga/effects";
 
 import { MOVIES } from "../constants";
 import fetchMoies from "../api";
@@ -14,7 +14,7 @@ function* handleMoviesLoad() {
 }
 
 function* watchMoviesLoad() {
-  yield takeEvery(MOVIES.LOAD, handleMoviesLoad);
+  yield all([takeEvery(MOVIES.LOAD, handleMoviesLoad)]);
 }
 
 export default watchMoviesLoad;

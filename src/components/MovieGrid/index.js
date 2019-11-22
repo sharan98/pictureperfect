@@ -15,7 +15,6 @@ class MovieGrid extends Component {
 
   componentDidMount() {
     this.props.loadMovies();
-    this.props.loadMovies();
   }
   render() {
     const { t } = this.props;
@@ -54,8 +53,5 @@ const mapDispatchToProps = dispatch => ({
 });
 
 export default withTranslation()(
-  connect(
-    mapStateToProps,
-    mapDispatchToProps
-  )(MovieGrid)
+  connect(mapStateToProps, mapDispatchToProps)(MovieGrid)
 );

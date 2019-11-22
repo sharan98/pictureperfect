@@ -37,7 +37,7 @@ export default function MovieCard(props) {
           />
         </CardActionArea>
       </Card>
-      <Typography variant="h7">{title}</Typography>
+      <Typography variant="caption">{title}</Typography>
       <br />
       <Rating value={rating} readOnly size="small" />
     </div>
